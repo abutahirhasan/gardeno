@@ -1,0 +1,669 @@
+.footer-newsletter-wrapper {
+	padding: 120px 0 30px;
+	@include flex;
+	justify-content: space-between;
+
+	@include breakpoint(max-xxl) {
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+
+	@include breakpoint(max-lg) {
+		padding: 80px 0 0;
+	}
+
+	.newsletter-left {
+		display: flex;
+		gap: 100px;
+
+		@include breakpoint(max-xxl) {
+			flex-wrap: wrap;
+			gap: 30px;
+		}
+
+		.newsletter-content {
+			width: 532px;
+
+			h3 {
+				color: $white;
+				margin-bottom: 30px;
+			}
+
+			form {
+				max-width: 532px;
+				width: 100%;
+
+				.form-clt {
+					position: relative;
+
+					input {
+						width: 100%;
+						outline: none;
+						border: none;
+						color: rgba(255, 255, 255, 0.66);
+						background: transparent;
+						line-height: 1;
+						padding: 16px 0;
+						max-width: 532px;
+						border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+
+						&::placeholder {
+							color: rgba(255, 255, 255, 0.66);
+						}
+					}
+
+					.theme-btn {
+						position: absolute;
+						right: 2px;
+						bottom: 5px;
+						background: #eeff69;
+						color: $header-color;
+
+						&::before {
+							background-color: $white;
+						}
+
+						&:hover {
+							color: $header-color;
+						}
+
+						@include breakpoint(max-xxs) {
+							position: static;
+							margin-top: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.download-app-item {
+		h3 {
+			color: $white;
+			margin-bottom: 28px;
+		}
+
+		.app-item {
+			@include flex;
+			gap: 13px;
+			margin-bottom: 30px;
+
+			.app-conntent {
+				span {
+					color: rgba(255, 255, 255, 0.74);
+					font-size: 14px;
+					font-weight: 400;
+				}
+
+				h6 {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+.footer-section {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	margin: 0 15px;
+	position: relative;
+	z-index: 9;
+
+	.bottom-shape {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+
+		@include breakpoint(max-xxl) {
+			display: none;
+		}
+
+		img {
+			height: 460.468px;
+		}
+	}
+}
+
+.footer-widget-wrapper {
+	padding: 60px 0 120px;
+
+	@include breakpoint(max-xxl) {
+		padding: 30px 0 100px;
+	}
+
+	@include breakpoint(max-lg) {
+		padding: 30px 0 80px;
+	}
+
+	.single-footer-widget {
+		margin-top: 30px;
+
+		.widget-title {
+			margin-bottom: 30px;
+
+			h3 {
+				color: $white;
+			}
+		}
+
+		.list {
+			li {
+				@include breakpoint(max-xxl) {
+					font-size: 14px;
+				}
+
+				@include breakpoint(max-lg) {
+					font-size: 16px;
+				}
+
+				a {
+					color: rgba(255, 255, 255, 0.66);
+				}
+
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+
+		p {
+			color: rgba(255, 255, 255, 0.66);
+			max-width: 260px;
+
+			@include breakpoint(max-xxl) {
+				font-size: 14px;
+			}
+		}
+
+		.list-area {
+			li {
+				@include transition;
+
+				@include breakpoint(max-xxl) {
+					font-size: 13px;
+				}
+
+				@include breakpoint(max-lg) {
+					font-size: 16px;
+				}
+
+				&:not(:last-child) {
+					margin-bottom: 30px;
+				}
+
+				a {
+					color: rgba(255, 255, 255, 0.66);
+
+					i {
+						margin-right: 5px;
+						color: #eeff69;
+						font-size: 16px;
+					}
+				}
+
+				&:hover {
+					margin-left: 5px;
+
+					a {
+						color: $theme-color;
+
+						i {
+							color: $theme-color;
+						}
+					}
+				}
+			}
+
+			&.style-2 {
+				margin-top: 30px;
+			}
+		}
+
+		.social-icon {
+			gap: 18px;
+
+			a {
+				color: #bcc3c5;
+				font-size: 22px;
+
+				@include breakpoint(max-xxl) {
+					font-size: 16px;
+				}
+
+				@include breakpoint(max-lg) {
+					font-size: 22px;
+				}
+
+				&:hover {
+					color: $theme-color;
+				}
+			}
+		}
+	}
+}
+
+.footer-bottom {
+	border-top: 1px dashed rgba(255, 255, 255, 0.24);
+
+	.footer-wrapper {
+		@include flex;
+		justify-content: space-between;
+		padding: 20px 0;
+
+		@include breakpoint(max-xxl) {
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+
+		p {
+			color: rgba(255, 255, 255, 0.66);
+		}
+
+		.bottom-list {
+			@include flex;
+			gap: 40px;
+
+			@include breakpoint(max-xxl) {
+				flex-wrap: wrap;
+				gap: 20px;
+			}
+
+			li {
+				a {
+					color: rgba(255, 255, 255, 0.66);
+
+					&:hover {
+						color: $theme-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer-newsletter-content-2 {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.19);
+
+	.newsletter-content {
+		@include flex;
+		justify-content: space-between;
+		padding: 100px 0 70px;
+
+		@include breakpoint(max-lg) {
+			padding: 80px 0 70px;
+			flex-wrap: wrap;
+			gap: 30px;
+		}
+
+		h3 {
+			color: $white;
+			font-size: 32px;
+			font-weight: 500;
+
+			@include breakpoint(max-sm) {
+				font-size: 25px;
+			}
+		}
+
+		form {
+			max-width: 571px;
+			width: 100%;
+
+			.form-clt {
+				position: relative;
+
+				input {
+					width: 100%;
+					outline: none;
+					border: none;
+					border-radius: 61px;
+					border: 1px solid rgba(255, 255, 255, 0.19);
+					background: #33454d;
+					color: rgba(255, 255, 255, 0.66);
+					line-height: 1;
+					padding: 20px;
+					max-width: 571px;
+
+					&::placeholder {
+						color: rgba(255, 255, 255, 0.66);
+					}
+				}
+
+				.theme-btn {
+					position: absolute;
+					top: 5px;
+					right: 5px;
+					bottom: 5px;
+					background-color: $theme-color-3;
+					color: $header-color;
+					border-radius: 100px;
+					padding: 10px 35px;
+
+					@include breakpoint(max-xxs) {
+						position: static;
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer-widget-wrapper-2 {
+	padding: 40px 0 70px;
+	position: relative;
+
+	&::before {
+		position: absolute;
+		content: "";
+		height: 100%;
+		width: 1px;
+		background-color: rgba(255, 255, 255, 0.19);
+		left: 430px;
+		top: 0;
+		bottom: 0;
+
+		@include breakpoint(max-xxl) {
+			display: none;
+		}
+	}
+
+	.single-sideber-widget {
+		margin-top: 30px;
+
+		.widget-title {
+			margin-bottom: 30px;
+
+			h3 {
+				color: $white;
+			}
+		}
+
+		.footer-icon-item {
+			@include flex;
+			gap: 10px;
+			margin-bottom: 24px;
+
+			.icon {
+				width: 32px;
+				height: 32px;
+				line-height: 32px;
+				background-color: $bg-color-4;
+				color: $white;
+				text-align: center;
+			}
+
+			h6 {
+				color: $white;
+				font-size: 14px;
+				font-weight: 400;
+				font-family: $body-font;
+
+				a {
+					color: $white;
+				}
+			}
+		}
+
+		.list-area {
+			li {
+				@include transition;
+
+				@include breakpoint(max-xxl) {
+					font-size: 13px;
+				}
+
+				@include breakpoint(max-lg) {
+					font-size: 16px;
+				}
+
+				&:not(:last-child) {
+					margin-bottom: 30px;
+				}
+
+				a {
+					color: rgba(255, 255, 255, 0.66);
+
+					i {
+						margin-right: 5px;
+						color: #eeff69;
+						font-size: 16px;
+					}
+				}
+
+				&:hover {
+					margin-left: 5px;
+
+					a {
+						color: $theme-color;
+
+						i {
+							color: $theme-color;
+						}
+					}
+				}
+			}
+		}
+
+		.footer-gallery {
+			.gallery-wrap {
+				.gallery-item {
+					@include flex;
+					gap: 10px;
+
+					&:not(:last-child) {
+						margin-bottom: 10px;
+					}
+
+					.thumb {
+						position: relative;
+
+						@include breakpoint(max-sm) {
+							width: 100px;
+						}
+
+						img {
+							@include imgw;
+							border-radius: 5px;
+						}
+
+						.icon {
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							z-index: 1;
+							text-align: center;
+							transition: 0.3s;
+							opacity: 0;
+							width: 100%;
+							height: 100%;
+
+							&::after {
+								position: absolute;
+								content: "";
+								top: 0;
+								left: 0;
+								right: 0;
+								bottom: 0;
+								background-color: rgba(153, 165, 55, 0.5);
+								transition: 0.4s;
+								opacity: 0;
+								width: 100%;
+								height: 100%;
+								border-radius: 5px;
+							}
+
+							i {
+								color: $white;
+								font-size: 22px;
+								z-index: 99;
+								position: relative;
+								margin-top: 30px;
+							}
+						}
+
+						&:hover {
+							.icon {
+								opacity: 1;
+								&::after {
+									opacity: 1;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer-bottom-2 {
+	border-top: 1px solid rgba(255, 255, 255, 0.19);
+
+	.footer-wrapper-2 {
+		@include flex;
+		justify-content: space-between;
+		padding: 20px 0;
+
+		@include breakpoint(max-xxl) {
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+
+		p {
+			color: $white;
+		}
+
+		.social-icon {
+			gap: 18px;
+
+			a {
+				color: #bcc3c5;
+				font-size: 22px;
+
+				@include breakpoint(max-xxl) {
+					font-size: 16px;
+				}
+
+				@include breakpoint(max-lg) {
+					font-size: 22px;
+				}
+
+				&:hover {
+					color: $theme-color;
+				}
+			}
+		}
+	}
+}
+
+.footer-section-2 {
+	position: relative;
+	z-index: 9;
+
+	.left-shape {
+		position: absolute;
+		left: 104px;
+		bottom: 70px;
+
+		@include breakpoint(max-xxxl) {
+			left: 30px;
+		}
+
+		@include breakpoint(max-xxl) {
+			display: none;
+		}
+	}
+
+	.right-shape {
+		position: absolute;
+		top: 30px;
+		right: 0;
+		z-index: -1;
+
+		@include breakpoint(max-xxl) {
+			display: none;
+		}
+	}
+}
+
+//Footer 03
+.footer-section-3 {
+	.list-area {
+		li {
+			margin: 0 !important;
+			a {
+				color: $white !important;
+				position: relative;
+				i {
+					position: absolute;
+					top: 50%;
+					left: 0;
+					transform: translateY(-50%);
+					opacity: 0;
+					transition: all 0.4s;
+				}
+				.f-text {
+					transition: all 0.4s;
+				}
+				&:hover {
+					color: $theme-color-3 !important;
+					i {
+						opacity: 1;
+					}
+					.f-text {
+						padding-left: 20px;
+					}
+				}
+			}
+		}
+	}
+	@include breakpoint(max-xxl) {
+        h5,
+        p,
+		a {
+			font-size: 14px !important;
+		}
+	}
+}
+.form-style3 {
+	border-radius: 10px;
+	border: 1px solid rgb(255, 255, 255, 0.3);
+	overflow: hidden;
+    background-color: #053A14;
+	input {
+		background: transparent;
+		border: 0;
+		font-size: 16px;
+		color: $white;
+		width: 100%;
+		height: 50px;
+		padding: 4px 20px;
+		font-weight: 400;
+	}
+	::placeholder {
+		color: $white;
+	}
+	button {
+		min-width: 155px;
+		height: 56px;
+	}
+    @include breakpoint(max-md){
+        button{
+            min-width: 35px;
+        }
+    }
+}
+.footer-bottom-3 {
+	.footer-wrapper {
+		border-top: 1px solid rgb(255, 255, 255, 0.2);
+	}
+	.f-logo {
+		max-width: 170px;
+		display: block;
+	}
+}

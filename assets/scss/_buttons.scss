@@ -1,0 +1,52 @@
+
+.theme-btn {
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: $theme-color;
+    font-family: "Parkinsans", sans-serif;
+    padding: 18px 34px;
+    color: $white;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    border: none;
+    outline: none !important;
+
+  i {
+     color: $white;
+     margin-left: 5px;
+  }
+
+
+  &::before {
+     content: "";
+    height: 0px;
+    width: 0px;
+    background-color: $white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: $header-color;
+
+    &::before {
+        height: 400px;
+        width: 200%;
+        top: -70%;
+        left: -46%;
+    }
+
+    i {
+        color: $header-color;
+    }
+  }
+}

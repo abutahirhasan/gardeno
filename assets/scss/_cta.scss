@@ -1,0 +1,343 @@
+.cta-section {
+    margin: 0 15px;
+    border-radius: 20px;
+    position: relative;
+
+    .left-shape {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+         -webkit-animation: dance 2s alternate infinite;
+
+          @include breakpoint (max-xxl) {
+            display: none;
+        }
+    }
+
+    .right-shape {
+        position: absolute;
+        right: 0;
+        bottom: 30px;
+       
+        @include breakpoint (max-xxl) {
+            display: none;
+        }
+    }
+
+    .bottom-shape {
+        position: absolute;
+        left: 40%;
+        bottom: 30px;
+       
+        @include breakpoint (max-xxl) {
+            display: none;
+        }
+    }
+
+    .logo-shape {
+        position: absolute;
+        right: 343px;
+        top: 66px;
+
+        @include breakpoint (max-xxxl) {
+            right: 110px;
+        }
+       
+        @include breakpoint (max-xxl) {
+            display: none;
+        }
+    }
+
+    &::before {
+        @include before;
+        background-color: $theme-color-2;
+        border-radius: 0 0 83.5px 83.5px;
+        width: 158px;
+        height: 224px;
+        left: initial;
+        right: 340px;
+        top: 0;
+
+        @include breakpoint (max-xxxl) {
+            right: 110px;
+        }
+
+        @include breakpoint (max-xxl) {
+            display: none;
+        }
+    }
+}
+
+.cta-content-style-1 {
+
+    .section-title {
+        h2 {
+            font-size: 66px;
+             font-family: $heading-font;
+
+            @include breakpoint(max-xl){
+                font-size: 45px;
+            }
+
+            @include breakpoint(max-lg){
+                font-size: 40px;
+            }
+
+            @include breakpoint(max-md){
+                font-size: 35px;
+            }
+
+            @include breakpoint(max-sm){
+                font-size: 30px;
+            }
+        }
+    }
+
+    .theme-btn {
+        margin-top: 40px;
+        background-color: #084D36;
+    }
+}
+
+.cta-image-style-1 {
+    margin-bottom: -120px;
+}
+
+.cta-bg-content-style-1 {
+    text-align: center;
+
+    .section-title {
+        .sub-title {
+            color: #EEFF69;
+        }
+    }
+
+    .content {
+        margin-top: 15px;
+
+        .text {
+            max-width: 580px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .theme-btn {
+            background: #EEFF69;
+            margin-top: 30px;
+            color: $header-color;
+
+            i {
+                color: $header-color;
+            }
+
+            &::before {
+                background-color: $white;
+            }
+
+            &:hover {
+                color: $header-color;
+            }
+        }
+
+        .icon-list {
+            @include flex;
+            gap: 40px;
+            margin-top: 48px;
+            justify-content: center;
+
+            @include breakpoint (max-xxl) {
+                margin-top: 30px;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            li {
+                color: $white;
+
+                svg {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+.cta-bg-section {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: 0 15px;
+
+    .right-shape {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        @include breakpoint (max-xxl) {
+            display: none;
+        }
+    }
+
+    .track-shape {
+        position: absolute;
+        right: 180px;
+        bottom: 80px;
+
+         @include breakpoint (max-xxxl) {
+           right: 95px;
+        }
+
+        @include breakpoint (max-xxl) {
+            display: none;
+        }
+    }
+
+    .hand-shape {
+        position: absolute;
+        right: 460px;
+        bottom: 300px;
+
+        @include breakpoint (max-xxxl) {
+            display: none;
+        }
+    }
+
+    .left-image {
+        position: absolute;
+        left: 100px;
+        bottom: 0;
+
+        img {
+            @include imgw;
+        }
+
+        @include breakpoint (max-xxxl) {
+           max-width: 370px;
+           left: 70px;
+        }
+
+        @include breakpoint (max-xxl) {
+            display: none;
+        }
+    }
+}
+
+.cta-wrapper-style-2 {
+    border-radius: 22px;
+    background-color: $theme-color;
+    padding: 80px 0;
+    position: relative;
+    z-index: 9;
+    margin-top: -230px;
+
+     @include breakpoint (max-xxl) {
+       margin-top: 0;
+    }
+
+    .left-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+
+        img {
+            @include imgw;
+            border-radius: 22px;
+        }
+
+         @include breakpoint (max-lg) {
+            display: none;
+        }
+    }
+
+     .right-image {
+        position: absolute;
+        right: 25px;
+        top: -50px;
+        bottom: 0;
+
+         @include breakpoint (max-xxl) {
+            right: 0;
+            top: 0;
+        }
+
+         @include breakpoint (max-lg) {
+            display: none;
+        }
+
+        img {
+            @include imgw;
+        }
+    }
+
+    .middle-shape {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: -1;
+    }
+
+    .cta-content-style-2 {
+        text-align: center;
+
+        .section-title {
+            h2 {
+                font-size: 48px;
+                font-weight: 400;
+
+                @include breakpoint(max-xxl){
+                    font-size: 45px;
+                }
+
+                @include breakpoint(max-xl){
+                    font-size: 45px;
+                }
+
+                @include breakpoint(max-lg){
+                    font-size: 40px;
+                }
+
+                @include breakpoint(max-md){
+                    font-size: 35px;
+                }
+
+                @include breakpoint(max-sm){
+                    font-size: 30px;
+                }
+
+                @include breakpoint(max-xxs){
+                    font-size: 28px;
+                }
+            }
+        }
+
+        .theme-btn {
+            background: #EEFF69;
+            margin-top: 30px;
+            color: $header-color;
+
+            i {
+                color: $header-color;
+            }
+
+            &::before {
+                background-color: $white;
+            }
+
+            &:hover {
+                color: $header-color;
+            }
+        }
+    }
+}
+
+.cta-section-2 {
+    @include breakpoint (max-xxl) {
+        overflow: hidden;
+       margin-top: 100px;
+    }
+
+    @include breakpoint (max-lg) {
+        margin-top: 80px;
+    }
+}

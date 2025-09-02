@@ -1,0 +1,233 @@
+.project-card-item-style-1 {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: $white;
+    border-radius: 12px;
+    box-shadow: 8px 6px 51.3px 151px rgba(10, 3, 46, 0.03);
+    margin-bottom: 20px;
+
+    &.style-new {
+        margin-bottom: 0;
+        box-shadow: none;
+    }
+
+    .project-image {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: "";
+            background-color: rgba(8, 77, 54, 0.30);
+            opacity: 1;
+            -webkit-transition: .5s;
+            -o-transition: .5s;
+            transition: .5s;
+            -webkit-transform: perspective(400px) rotateY(-90deg) scale(0.2);
+            -ms-transform: perspective(400px) rotateY(-90deg) scale(0.2);
+            transform: perspective(400px) rotateY(-90deg) scale(0.2);
+            -webkit-transform-origin: top;
+            -ms-transform-origin: top;
+            transform-origin: top;
+            z-index: 1;
+             border-radius: 10px;
+        }
+
+        img {
+            @include imgw;
+            border-radius: 12px;
+            transition-delay: .1s;
+            transition-timing-function: ease-in-out;
+            transition-duration: .7s;
+            transition-property: all;
+        }
+    }
+
+    .project-content {
+        padding: 20px 15px 10px;
+        .content {
+            @include flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #CDCDCD;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+
+            h3 {
+                a {
+                    background-position: 0 95%;
+                    background-repeat: no-repeat;
+                    background-size: 0% 2px;
+                    display: inline;
+                    
+                    &:hover {
+                        color: $theme-color;
+                        background-size: 100% 2px;
+                        background-image: linear-gradient(180deg, $theme-color 0%, $theme-color 100%);
+                    }
+                }
+            }
+
+            .arrow {
+                transform: rotate(-45deg);
+            }
+        }
+
+        .project-list {
+            @include flex;
+            justify-content: space-between;
+
+            li {
+                 @include breakpoint (max-xxxl) {
+                    font-size: 14px;
+                }
+
+                span {
+                    color: #434343;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .project-image {
+            &::before {
+                 opacity: 1;
+                -webkit-transform: perspective(400px) rotateY(0deg) scale(1.0);
+                -ms-transform: perspective(400px) rotateY(0deg) scale(1.0);
+                transform: perspective(400px) rotateY(0deg) scale(1.0);
+            }
+
+            img {
+                transform: scale(1.1) rotate(2deg);
+            }
+        }
+    }
+}
+
+.project-section {
+    margin-bottom: -20px;
+   
+
+    .project-slider {
+        margin-left: -80px;
+        margin-right: -80px;
+
+        @include breakpoint (max-xxxl) {
+            margin-right: -56;
+            margin-left: -56;
+        }
+
+        @include breakpoint (max-xxl) {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    p {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 10px;
+
+        .view-btn {
+            color: $theme-color
+        }
+    }
+}
+
+.project-section-2 {
+    position: relative;
+    z-index: 9;
+
+    .section-title {
+        width: fit-content;
+        margin-left: auto;
+
+         @include breakpoint (max-xxl) {
+            text-align: left;
+            margin-left: initial;
+        }
+    }
+
+    .left-shape {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+         @include breakpoint (max-xxl) {
+            display: none;
+        }
+    }
+
+    .left-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+
+        @include breakpoint (max-xxxl) {
+           left: -100px;
+        }
+
+         @include breakpoint (max-xxl) {
+            display: none;
+        }
+
+        &::before {
+            @include before;
+            background: rgba(33, 53, 62, 0.90);
+        }
+
+        img {
+            @include imgw;
+        }
+    }
+
+    .arrow-button {
+        position: absolute;
+        right: 31%;
+        margin-top: 0;
+        bottom: 11%;
+
+         @include breakpoint (max-xxl) {
+           display: none;
+        }
+
+        .array-prev {
+            z-index: 999;
+        }
+
+        .array-next {
+            z-index: 999;
+        }
+    }
+
+    .project-slider {
+        margin-left: -80px;
+        margin-right: -80px;
+       
+        &.style-2 {
+             padding-bottom: 105px;
+
+             @include breakpoint (max-xxl) {
+               padding-bottom: 0;
+            }
+        }
+
+        @include breakpoint (max-xxxl) {
+            margin-right: -56;
+            margin-left: -56;
+        }
+
+        @include breakpoint (max-xxl) {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.scrolling-wrap-2 {
+	overflow: hidden;
+	white-space: nowrap;
+	display: flex;
+	gap: 0;
+    margin-top: 0px;
+    margin-bottom: 100px;
+
+    @include breakpoint (max-lg) {
+       margin-bottom: 80px;
+    }
+
+	.comm {
+		display: flex;
+		align-items: center;
+		animation: scroll 60s linear infinite;
+		gap: 40px;
+		cursor: pointer;
+
+		.cmn-textslide {
+			font-size: 88px;
+            color: rgba(255, 255, 255, 0.44);
+			font-weight: 500;
+			line-height: 60px;
+			text-transform: capitalize;
+            font-family: $body-font;
+            @include flex;
+            position: relative;
+
+             @include breakpoint (max-xl) {
+                font-size: 70px;
+            }
+		}
+	}
+
+	&:hover {
+		.comm {
+			animation-play-state: paused;
+		}
+	}
+
+	@include breakpoint (max-xxl) {
+		.comm {
+			gap: 20px;
+		}
+	}
+
+	@include breakpoint (max-lg) {
+		gap: 14px;
+		.comm {
+			gap: 14px;
+		}
+	}
+
+	@include breakpoint (max-sm) {
+		.comm {
+			gap: 12px;
+		}
+	}
+}
