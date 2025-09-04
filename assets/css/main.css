@@ -42,21 +42,26 @@ Version: 1.0.0
 */
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 :root {
   --body: #fff;
   --black: #000;
+  --black2: #020842;
   --white: #fff;
   --theme: #99A537;
   --theme-2: #084D36;
+  --theme-2dark: #144B24;
   --theme-3: #E6F767;
   --header: #063232;
   --text: #666;
   --text-2: #687799;
+  --text-3: #092210;
   --border: #CAD2D2;
   --bg: #4C5D5A;
   --bg-2: #9C9C9C;
   --bg-3: #D9D9D9;
   --bg-4: #33454D;
+  --bg-5: #F8FAF8;
   --box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.13);
 }
 
@@ -287,6 +292,18 @@ span {
   margin: 0px;
 }
 
+.h-45 {
+  height: 46px;
+}
+
+.text-clr {
+  color: var(--text);
+}
+
+.text-black2 {
+  color: var(--black2);
+}
+
 .theme-clr {
   color: var(--theme) !important;
 }
@@ -295,8 +312,16 @@ span {
   color: var(--theme-2) !important;
 }
 
+.theme2-dark-clr {
+  color: var(--theme-2dark);
+}
+
 .theme-clr3 {
   color: var(--theme-3) !important;
+}
+
+.text-clr3 {
+  color: var(--text-3) !important;
 }
 
 .fs-10 {
@@ -336,6 +361,59 @@ span {
 
 .heading-font2 {
   font-family: "Parkinsans", sans-serif;
+}
+
+.heading-font3 {
+  font-family: "Oswald", sans-serif;
+}
+
+@media (min-width: 1400px) {
+  .container1320 {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+}
+
+.bg-5 {
+  background-color: var(--bg-5);
+}
+
+.more-btn {
+  font-family: "Parkinsans", sans-serif;
+  font-size: 16px;
+  color: var(--theme-2dark);
+  transition: all 0.3s;
+  position: relative;
+  z-index: 1;
+  padding: 11px 28px;
+  border-radius: 30px;
+}
+.more-btn i {
+  color: var(--theme-2dark);
+  transition: all 0.3s;
+}
+.more-btn::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  content: "";
+  background-color: #F0F0F0;
+  z-index: -1;
+  transition: all 0.3s;
+}
+.more-btn:hover {
+  color: var(--white);
+}
+.more-btn:hover i {
+  color: var(--white);
+}
+.more-btn:hover::before {
+  width: 100%;
+  background-color: var(--theme);
+  border-radius: 100px;
 }
 
 .about-left-items-style-1 .about-image {
@@ -4875,7 +4953,7 @@ span {
 }
 .news-card-item-style-1 .news-content span {
   color: var(--theme);
-  border-bottom: 1px dashed #CDCDCD;
+  border-bottom: 1px dashed #cdcdcd;
   padding-bottom: 15px;
   margin-bottom: 15px;
   display: inline-block;
@@ -5108,6 +5186,104 @@ span {
 @media (max-width: 1600px) {
   .news-section-2 .left-shape {
     display: none;
+  }
+}
+
+.blog-newsletter h3 {
+  font-size: 35px;
+  color: var(--black);
+}
+.blog-newsletter p {
+  margin-bottom: 20px;
+}
+.blog-newsletter .news-employee {
+  margin-bottom: 40px;
+  gap: 8px 45px;
+}
+.blog-newsletter .blog-input {
+  margin-bottom: 40px;
+}
+.blog-newsletter input {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(9, 34, 16, 0.2);
+  background: #fff;
+  padding: 14px 18px;
+  color: var(--text);
+  font-size: 16px;
+}
+@media (max-width: 1399px) {
+  .blog-newsletter .news-employee {
+    margin-bottom: 24px;
+    gap: 8px 24px;
+  }
+  .blog-newsletter h5 {
+    font-size: 16px;
+  }
+  .blog-newsletter h3 {
+    font-size: 22px;
+  }
+  .blog-newsletter p {
+    margin-bottom: 15px;
+  }
+  .blog-newsletter .blog-input {
+    margin-bottom: 24px;
+  }
+}
+
+.news-card-item-style-3 {
+  gap: 30px;
+  display: flex;
+}
+.news-card-item-style-3 .news-images {
+  width: 380px;
+  display: block;
+  overflow: hidden;
+}
+.news-card-item-style-3 .news-images img {
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.news-card-item-style-3 .news-list {
+  display: flex;
+  align-items: center;
+  gap: 7px 24px;
+}
+.news-card-item-style-3 .news-list li {
+  font-size: 16px;
+}
+.news-card-item-style-3 .news-list li i {
+  color: var(--theme-2dark);
+}
+.news-card-item-style-3 .by-admin {
+  border: 2px solid #bfe866;
+}
+.news-card-item-style-3:hover .news-images img {
+  transform: scale(1.09);
+}
+@media (max-width: 1399px) {
+  .news-card-item-style-3 {
+    gap: 15px 20px;
+  }
+  .news-card-item-style-3 .news-images {
+    width: 300px;
+  }
+  .news-card-item-style-3 .news-list {
+    display: flex;
+    align-items: center;
+    gap: 7px 14px;
+  }
+  .news-card-item-style-3 .news-list li {
+    font-size: 16px;
+  }
+  .news-card-item-style-3 .news-list li i {
+    color: var(--theme-2dark);
+  }
+}
+@media (max-width: 575px) {
+  .news-card-item-style-3 .news-images {
+    width: 100% !important;
   }
 }
 
