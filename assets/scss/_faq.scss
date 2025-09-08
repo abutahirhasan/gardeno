@@ -1,0 +1,107 @@
+//Accordion
+.accordion-button:not(.collapsed) {
+	inset: 0 !important;
+	box-shadow: none !important;
+}
+.accordion-button:focus {
+	z-index: 3;
+	border-color: unset;
+	outline: 0;
+	box-shadow: none;
+}
+//Accordion
+.accordion-item {
+	padding: 12px 10px 12px 25px;
+    filter: drop-shadow(0 10px 40px rgba(29, 31, 21, 0.10));
+    background-color: $white;
+	border-radius: 30px;
+    overflow: hidden;
+    border: unset;
+	.accordion-header {
+		.accordion-button {
+			background: transparent;
+			padding: 0;
+			outline: none;
+			font-size: 21px;
+			font-weight: 400;
+			color: #092210;
+            font-family: $body-font;
+			&::after {
+				content: "\2b";
+				font-family: "Font Awesome 6 Free";
+				background: transparent;
+				font-weight: 800;
+				transition: all 0.3s ease-in-out !important;
+				color: #092210;
+				font-size: 20px;
+				width: 32px;
+				height: 32px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid rgba(73, 87, 122, 10%);
+			}
+			&:not(.collapsed)::after {
+				// content: "\f068";
+				// font-family: "Font Awesome  Free";
+				// background: transparent;
+				// font-weight: 700;
+				// transition: all 0.3s ease-in-out !important;
+				// color: $black;
+				// font-size: 28px;
+				// transform: rotate(0);
+				// border-radius: 50%;
+				width: 32px;
+				height: 32px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+	.accordion-body {
+		padding: 0;
+		padding-top: 8px;
+		p {
+			font-size: 16px;
+			color: #666;
+            font-weight: 400;
+            font-family: $body-font;
+            line-height: 26px;
+		}
+	}
+	&.active{
+		.accordion-button{
+			color: $theme-color;
+			&::after{
+				background: $theme-color !important;
+				color: $white !important;
+			}
+		}
+	}
+	@include breakpoint(max-xl) {
+		.accordion-header {
+			.accordion-button {
+				font-size: 20px;
+				font-weight: 700;
+				&::after {
+					font-size: 20px;
+				}
+			}
+		}
+		.accordion-body {
+			padding-top: 6px;
+			p {
+				font-size: 15px;
+			}
+		}
+	}
+}
+
+.accordion-item:last-child {
+    border-radius: 30px !important;    
+}
+.accordion-item:first-child {
+    border-radius: 30px !important;    
+}

@@ -1881,6 +1881,100 @@ span {
   }
 }
 
+.accordion-button:not(.collapsed) {
+  inset: 0 !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: unset;
+  outline: 0;
+  box-shadow: none;
+}
+
+.accordion-item {
+  padding: 12px 10px 12px 25px;
+  filter: drop-shadow(0 10px 40px rgba(29, 31, 21, 0.1));
+  background-color: var(--white);
+  border-radius: 30px;
+  overflow: hidden;
+  border: unset;
+}
+.accordion-item .accordion-header .accordion-button {
+  background: transparent;
+  padding: 0;
+  outline: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: #092210;
+  font-family: "Parkinsans", sans-serif;
+}
+.accordion-item .accordion-header .accordion-button::after {
+  content: "+";
+  font-family: "Font Awesome 6 Free";
+  background: transparent;
+  font-weight: 800;
+  transition: all 0.3s ease-in-out !important;
+  color: #092210;
+  font-size: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(73, 87, 122, 0.1);
+}
+.accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.accordion-item .accordion-body {
+  padding: 0;
+  padding-top: 8px;
+}
+.accordion-item .accordion-body p {
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
+  font-family: "Parkinsans", sans-serif;
+  line-height: 26px;
+}
+.accordion-item.active .accordion-button {
+  color: var(--theme);
+}
+.accordion-item.active .accordion-button::after {
+  background: var(--theme) !important;
+  color: var(--white) !important;
+}
+@media (max-width: 1199px) {
+  .accordion-item .accordion-header .accordion-button {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .accordion-item .accordion-header .accordion-button::after {
+    font-size: 20px;
+  }
+  .accordion-item .accordion-body {
+    padding-top: 6px;
+  }
+  .accordion-item .accordion-body p {
+    font-size: 15px;
+  }
+}
+
+.accordion-item:last-child {
+  border-radius: 30px !important;
+}
+
+.accordion-item:first-child {
+  border-radius: 30px !important;
+}
+
 .video-wrapper {
   padding: 350px 0;
   text-align: center;
