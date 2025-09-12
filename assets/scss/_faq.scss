@@ -11,12 +11,12 @@
 }
 //Accordion
 .accordion-item {
-	padding: 12px 10px 12px 25px;
-    filter: drop-shadow(0 10px 40px rgba(29, 31, 21, 0.10));
-    background-color: $white;
+	padding: 14px 10px 14px 25px;
+	filter: drop-shadow(0 10px 40px rgba(29, 31, 21, 0.1));
+	background-color: $white;
 	border-radius: 30px;
-    overflow: hidden;
-    border: unset;
+	overflow: hidden;
+	border: unset;
 	.accordion-header {
 		.accordion-button {
 			background: transparent;
@@ -25,7 +25,7 @@
 			font-size: 21px;
 			font-weight: 400;
 			color: #092210;
-            font-family: $body-font;
+			font-family: $body-font;
 			&::after {
 				content: "\2b";
 				font-family: "Font Awesome 6 Free";
@@ -61,21 +61,25 @@
 		}
 	}
 	.accordion-body {
-		padding: 0;
-		padding-top: 8px;
+		padding: 20px 4px 10px 5px;
+		font-size: 16px;
+		color: #666 !important;
+		font-weight: 400;
+		font-family: $body-font !important;
+		line-height: 26px;
 		p {
-			font-size: 16px;
-			color: #666;
-            font-weight: 400;
-            font-family: $body-font;
-            line-height: 26px;
+			font-size: 16px !important;
+			color: #666 !important;
+			font-weight: 400;
+			font-family: $body-font !important;
+			line-height: 26px;
 		}
 	}
-	&.active{
-		.accordion-button{
-			color: $theme-color;
-			&::after{
-				background: $theme-color !important;
+	&.active {
+		.accordion-button {
+			color: $theme-2-dark;
+			&::after {
+				background: $theme-2-dark !important;
 				color: $white !important;
 			}
 		}
@@ -84,7 +88,24 @@
 		.accordion-header {
 			.accordion-button {
 				font-size: 20px;
-				font-weight: 700;
+				&::after {
+					font-size: 20px;
+				}
+			}
+		}
+		.accordion-body {
+			padding-top: 10px;
+			line-height: 20px;
+			p {
+				font-size: 15px;
+				line-height: 20px;
+			}
+		}
+	}
+	@include breakpoint(max-md) {
+		.accordion-header {
+			.accordion-button {
+				font-size: 16px;
 				&::after {
 					font-size: 20px;
 				}
@@ -92,16 +113,40 @@
 		}
 		.accordion-body {
 			padding-top: 6px;
+			font-size: 14px;
 			p {
-				font-size: 15px;
+				font-size: 14px;
 			}
 		}
 	}
 }
 
 .accordion-item:last-child {
-    border-radius: 30px !important;    
+	border-radius: 30px !important;
 }
 .accordion-item:first-child {
-    border-radius: 30px !important;    
+	border-radius: 30px !important;
+}
+.info-box_faq{
+	max-width: 273px;
+	position: absolute;
+	right: 10px;
+	bottom: 40px;
+	.icon{
+		width: 57px;
+		height: 57px;
+	}
+	h3{
+		font-size: 28px;
+	}
+	@include breakpoint(max-xs){
+		position: static;
+		max-width: 100%;
+		margin-top: 20px;
+	}
+}
+.faq-thumb3-big{
+	@media screen and (max-width: 500px) {
+		padding-right: 0 !important;
+	}
 }

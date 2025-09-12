@@ -71,6 +71,20 @@
 .theme-bg {
 	background-color: $theme-color;
 }
+.theme-bg2 {
+	background-color: $theme-color-2;
+}
+.theme-bg3 {
+	background-color: $theme-color-3;
+}
+.theme-bg-dark2 {
+	background-color: $theme-2-dark;
+}
+.d-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 .section-bg-1 {
 	background-color: $bg-color;
