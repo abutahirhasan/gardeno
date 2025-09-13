@@ -194,6 +194,43 @@
 			}
 
 			//>> Project Slider Start <<//
+			if ($(".studies-slider").length > 0) {
+				const studiesSlider = new Swiper(".studies-slider", {
+					speed: 1300,
+					loop: true,
+					autoplay: {
+						delay: 2000,
+						disableOnInteraction: false,
+					},
+					navigation: {
+						nextEl: ".array-prev",
+						prevEl: ".array-next",
+					},
+					breakpoints: {
+						1499: {
+							slidesPerView: 3.5,
+							spaceBetween: 64,
+						},
+						991: {
+							slidesPerView: 3,
+							spaceBetween: 30,
+						},
+						767: {
+							slidesPerView: 2,
+							spaceBetween: 24,
+						},
+						575: {
+							slidesPerView: 2,
+							spaceBetween: 18,
+						},
+						0: {
+							slidesPerView: 1,
+						},
+					},
+				});
+			}
+
+			//>> Project Slider Start <<//
 			if ($(".news-slider").length > 0) {
 				const NewsSlider = new Swiper(".news-slider", {
 					spaceBetween: 30,

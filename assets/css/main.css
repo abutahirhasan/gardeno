@@ -308,6 +308,10 @@ span {
   color: var(--theme) !important;
 }
 
+.theme-border {
+  border: 1px solid var(--theme);
+}
+
 .theme-clr2 {
   color: var(--theme-2) !important;
 }
@@ -322,6 +326,23 @@ span {
 
 .text-clr3 {
   color: var(--text-3) !important;
+}
+
+.py-onehalf {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.link-effect {
+  background-position: 0 95%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  display: inline;
+}
+.link-effect:hover {
+  color: var(--theme);
+  background-size: 100% 2px;
+  background-image: linear-gradient(180deg, var(--theme) 0%, var(--theme) 100%);
 }
 
 .fs-10 {
@@ -400,7 +421,7 @@ span {
   height: 45px;
   border-radius: 50%;
   content: "";
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   z-index: -1;
   transition: all 0.3s;
 }
@@ -5425,6 +5446,57 @@ span {
 @media (max-width: 575px) {
   .news-card-item-style-3 .news-images {
     width: 100% !important;
+  }
+}
+
+.studies-card-item .studies-image::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(235deg, rgba(9, 34, 16, 0) 30.97%, rgba(9, 34, 16, 0.75) 87.54%);
+  transition: all 0.4s;
+}
+.studies-card-item .studies-image::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  transition: all 0.4s;
+  background: rgba(10, 40, 3, 0.55);
+  opacity: 0;
+}
+.studies-card-item .studies-image .arrow {
+  width: 60px;
+  height: 60px;
+  background-color: var(--theme);
+  transition: all 0.8s;
+  opacity: 0;
+}
+.studies-card-item .studies-content h3, .studies-card-item .studies-content a {
+  font-style: 25px !important;
+  font-weight: 500;
+  font-family: "Parkinsans", sans-serif;
+}
+.studies-card-item:hover .studies-image::after {
+  opacity: 1;
+}
+.studies-card-item:hover .studies-image .arrow {
+  opacity: 1;
+  z-index: 2;
+  transform: rotate(-50deg);
+}
+
+.studies-slider {
+  margin-left: -280px;
+}
+@media (max-width: 991px) {
+  .studies-slider {
+    margin-left: 16px;
   }
 }
 

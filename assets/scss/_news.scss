@@ -474,3 +474,63 @@
 		}
 	}
 }
+
+
+//Studies
+.studies-card-item{
+	.studies-image{
+		&::before{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			content: "";
+			background: linear-gradient(235deg, rgba(9, 34, 16, 0.00) 30.97%, rgba(9, 34, 16, 0.75) 87.54%);
+			transition: all 0.4s;
+		}
+		&::after{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			content: "";
+			transition: all 0.4s;
+			background: rgba(10, 40, 3, 0.55);
+			opacity: 0;
+		}
+		.arrow{
+			width: 60px;
+			height: 60px;
+			background-color: $theme-color;
+			transition: all 0.8s;
+			opacity: 0;
+		}
+	}
+	.studies-content{
+		h3,a{
+			font-style: 25px !important;
+			font-weight: 500;
+			font-family: $body-font;
+		}
+	}
+	&:hover{
+		.studies-image{
+			&::after{
+				opacity: 1;
+			}
+			.arrow{
+				opacity: 1;
+				z-index: 2;
+				transform: rotate(-50deg);
+			}
+		}
+	}
+}
+.studies-slider{
+	margin-left: -280px;
+	@include breakpoint(max-lg){
+		margin-left: 16px;
+	}
+}

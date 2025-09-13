@@ -1,14 +1,14 @@
 /* --------------------------------------------
     Template Default Fonts & Fonts Styles
  ---------------------------------------------- */
- 
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
 
-$heading-font: 'Lobster Two', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+$heading-font: "Lobster Two", sans-serif;
 $body-font: "Parkinsans", sans-serif;
 $heading-font-2: "Parkinsans", sans-serif;
 $heading-font-3: "Oswald", sans-serif;
@@ -16,12 +16,12 @@ $heading-font-3: "Oswald", sans-serif;
 $fa: "Font Awesome 6 Pro";
 
 body {
-    font-family: $body-font;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    color: $text-color;
-    background-color: $white;
+	font-family: $body-font;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 28px;
+	color: $text-color;
+	background-color: $white;
 	padding: 0;
 	margin: 0;
 	overflow-x: hidden;
@@ -35,17 +35,17 @@ ul {
 }
 
 button {
-    border: none;
-    background-color: transparent;
+	border: none;
+	background-color: transparent;
 	padding: 0;
 }
 
-input:focus{
+input:focus {
 	color: $white;
 	outline: none;
 }
 
-input{
+input {
 	color: $white;
 }
 
@@ -55,10 +55,10 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $heading-font-2;
-    margin: 0px;
+	font-family: $heading-font-2;
+	margin: 0px;
 	padding: 0;
-    color: $header-color;
+	color: $header-color;
 	@include transition;
 	text-transform: capitalize;
 }
@@ -68,31 +68,31 @@ h1 {
 	font-weight: 400;
 	line-height: 97%;
 
-	@include breakpoint(max-xxxl){
+	@include breakpoint(max-xxxl) {
 		font-size: 70px;
 	}
 
-	@include breakpoint(max-xxl){
+	@include breakpoint(max-xxl) {
 		font-size: 60px;
 	}
 
-	@include breakpoint(max-xl){
+	@include breakpoint(max-xl) {
 		font-size: 55px;
 	}
 
-	@include breakpoint(max-lg){
+	@include breakpoint(max-lg) {
 		font-size: 50px;
 	}
 
-	@include breakpoint(max-md){
+	@include breakpoint(max-md) {
 		font-size: 55px;
 	}
 
-	@include breakpoint(max-sm){
+	@include breakpoint(max-sm) {
 		font-size: 43px;
 	}
 
-	@include breakpoint(max-xxs){
+	@include breakpoint(max-xxs) {
 		font-size: 32px;
 	}
 }
@@ -102,27 +102,27 @@ h2 {
 	font-weight: 500;
 	line-height: 121%;
 
-	@include breakpoint(max-xxl){
+	@include breakpoint(max-xxl) {
 		font-size: 45px;
 	}
 
-	@include breakpoint(max-xl){
+	@include breakpoint(max-xl) {
 		font-size: 45px;
 	}
 
-	@include breakpoint(max-lg){
+	@include breakpoint(max-lg) {
 		font-size: 40px;
 	}
 
-	@include breakpoint(max-md){
+	@include breakpoint(max-md) {
 		font-size: 35px;
 	}
 
-	@include breakpoint(max-sm){
+	@include breakpoint(max-sm) {
 		font-size: 30px;
 	}
 
-	@include breakpoint(max-xxs){
+	@include breakpoint(max-xxs) {
 		font-size: 25px;
 	}
 }
@@ -131,10 +131,10 @@ h3 {
 	font-size: 22px;
 	font-weight: 600;
 	line-height: 145%;
-	&.h3{
+	&.h3 {
 		font-size: 24px;
 	}
-	@include breakpoint(max-xl){
+	@include breakpoint(max-xl) {
 		font-size: 20px;
 	}
 }
@@ -144,7 +144,7 @@ h4 {
 	font-weight: 600;
 	line-height: 144%;
 
-	@include breakpoint(max-xl){
+	@include breakpoint(max-xl) {
 		font-size: 20px;
 	}
 }
@@ -161,15 +161,15 @@ h6 {
 }
 
 a {
-    text-decoration: none;
-    outline: none !important;
-    cursor: pointer;
-    color: $header-color;
+	text-decoration: none;
+	outline: none !important;
+	cursor: pointer;
+	color: $header-color;
 	@include transition;
 }
 
 p {
-    margin: 0px;
+	margin: 0px;
 	@include transition;
 }
 
@@ -178,87 +178,110 @@ span {
 	// @include transition;
 }
 
-
-.h-45{
+.h-45 {
 	height: 46px;
 }
-//Color 
-.text-clr{
+//Color
+.text-clr {
 	color: $text-color;
 }
-.text-black2{
+.text-black2 {
 	color: $black2;
 }
-.theme-clr{
+.theme-clr {
 	color: $theme-color !important;
 }
-.theme-clr2{
+.theme-border {
+	border: 1px solid $theme-color;
+}
+.theme-clr2 {
 	color: $theme-color-2 !important;
 }
-.theme2-dark-clr{
+.theme2-dark-clr {
 	color: $theme-2-dark;
 }
-.theme-clr3{
+.theme-clr3 {
 	color: $theme-color-3 !important;
 }
-.text-clr3{
+.text-clr3 {
 	color: $text-color-3 !important;
 }
-//Color 
+.py-onehalf {
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.link-effect {
+	background-position: 0 95%;
+	background-repeat: no-repeat;
+	background-size: 0% 2px;
+	display: inline;
+
+	&:hover {
+		color: $theme-color;
+		background-size: 100% 2px;
+		background-image: linear-gradient(
+			180deg,
+			$theme-color 0%,
+			$theme-color 100%
+		);
+	}
+}
+//Color
 
 //Font Size
-.fs-10{
+.fs-10 {
 	font-size: 10px;
 }
-.fs-12{
+.fs-12 {
 	font-size: 12px;
 }
-.fs-14{
+.fs-14 {
 	font-style: 14px;
 }
-.fs-16{
+.fs-16 {
 	font-style: 16px;
 }
-.fs-18{
+.fs-18 {
 	font-style: 18px;
 }
 //Font Size
 
-//Hover 
-.theme-clr3-hover{
+//Hover
+.theme-clr3-hover {
 	transition: all 0.4s;
-	&:hover{
+	&:hover {
 		color: $theme-color-3 !important;
 	}
 }
-//Hover 
+//Hover
 
 //Font
-.body-font{
+.body-font {
 	font-family: $body-font;
 }
-.heading-font{
+.heading-font {
 	font-family: $heading-font;
 }
-.heading-font2{
+.heading-font2 {
 	font-family: $heading-font-2;
 }
-.heading-font3{
+.heading-font3 {
 	font-family: $heading-font-3;
 }
 //Font
 
-.container1320{
-	@include breakpoint(xxl){
+.container1320 {
+	@include breakpoint(xxl) {
 		max-width: 1350px;
 		margin: 0 auto;
 	}
 }
 
-.bg-5{
+.bg-5 {
 	background-color: $bg-color-5;
 }
-.more-btn{
+.more-btn {
 	font-family: $heading-font-2;
 	font-size: 16px;
 	color: $theme-2-dark;
@@ -267,11 +290,11 @@ span {
 	z-index: 1;
 	padding: 11px 28px;
 	border-radius: 30px;
-	i{
+	i {
 		color: $theme-2-dark;
 		transition: all 0.3s;
 	}
-	&::before{
+	&::before {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -279,16 +302,16 @@ span {
 		height: 45px;
 		border-radius: 50%;
 		content: "";
-		background-color: #F0F0F0;
+		background-color: #f0f0f0;
 		z-index: -1;
 		transition: all 0.3s;
 	}
-	&:hover{
+	&:hover {
 		color: $white;
-		i{
+		i {
 			color: $white;
 		}
-		&::before{
+		&::before {
 			width: 100%;
 			background-color: $theme-color;
 			border-radius: 100px;
