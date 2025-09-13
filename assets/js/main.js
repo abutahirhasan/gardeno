@@ -319,6 +319,29 @@
 				},
 			});
 
+			//testimonial with thumb-slider02
+			var swiper_thumb = new Swiper(".testimonial-thumb-active2", {
+				loop: true,
+				spaceBetween: 22,
+				slidesPerView: 3,
+				direction: "vertical",
+				centeredSlides: true,
+				// freeMode: true,
+				watchSlidesProgress: true,
+			});
+			var swiper_content = new Swiper(".testimonial-content-active02", {
+				loop: true,
+				slidesPerView: 1,
+				spaceBetween: 0,
+				navigation: {
+					nextEl: ".array-prev",
+					prevEl: ".array-next",
+				},
+				thumbs: {
+					swiper: swiper_thumb,
+				},
+			});
+
 			//>> Hero-Image Slider Start <<//
 			if ($(".hero-image-slider").length > 0) {
 				const HeroImageSlider = new Swiper(".hero-image-slider", {
