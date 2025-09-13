@@ -5500,6 +5500,26 @@ span {
   }
 }
 
+.testimonial-style3 .container {
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+.testimonial-style3 .testimonial-pragraph3 {
+  max-width: 530px;
+  margin-left: auto;
+}
+@media (max-width: 767px) {
+  .testimonial-style3 .testimonial-pragraph3 {
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  .testimonial-style3 .container {
+    padding: 0 0;
+  }
+}
+
 /* ============================================================== 
     # Preloader CSS
 =================================================================== */
