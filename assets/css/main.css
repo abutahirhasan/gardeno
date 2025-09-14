@@ -1664,7 +1664,7 @@ span {
 }
 .cta-content-style-1 .theme-btn {
   margin-top: 40px;
-  background-color: #084D36;
+  background-color: #084d36;
 }
 
 .cta-image-style-1 {
@@ -1675,7 +1675,7 @@ span {
   text-align: center;
 }
 .cta-bg-content-style-1 .section-title .sub-title {
-  color: #EEFF69;
+  color: #eeff69;
 }
 .cta-bg-content-style-1 .content {
   margin-top: 15px;
@@ -1686,7 +1686,7 @@ span {
   color: rgba(255, 255, 255, 0.78);
 }
 .cta-bg-content-style-1 .content .theme-btn {
-  background: #EEFF69;
+  background: #eeff69;
   margin-top: 30px;
   color: var(--header);
 }
@@ -1876,7 +1876,7 @@ span {
   }
 }
 .cta-wrapper-style-2 .cta-content-style-2 .theme-btn {
-  background: #EEFF69;
+  background: #eeff69;
   margin-top: 30px;
   color: var(--header);
 }
@@ -1899,6 +1899,62 @@ span {
 @media (max-width: 991px) {
   .cta-section-2 {
     margin-top: 80px;
+  }
+}
+
+.counting-card-items {
+  text-align: center;
+  padding: 30px 16px 60px;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 8px 6px 51.3px 51px rgba(10, 3, 46, 0.03);
+  position: relative;
+  transition: all 0.3s;
+  position: relative;
+}
+.counting-card-items::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 91%;
+  height: 91%;
+  border-radius: 12px;
+  border: 1px dashed #97a237;
+  margin: 13px;
+}
+.counting-card-items h2 {
+  font-family: "Lobster Two";
+  font-size: 66px;
+  color: var(--theme);
+}
+.counting-card-items .circle-thumb {
+  animation: cir36 20s linear infinite;
+}
+.counting-card-items .circle-thumb2 {
+  opacity: 0;
+  transition: all 0.3s;
+}
+.counting-card-items:hover {
+  background-color: var(--theme);
+}
+.counting-card-items:hover .svg svg path {
+  transition: all 0.3s;
+  fill: var(--theme);
+}
+.counting-card-items:hover .circle-thumb1 {
+  opacity: 0;
+}
+.counting-card-items:hover .circle-thumb2 {
+  opacity: 1;
+}
+.counting-card-items:hover p,
+.counting-card-items:hover h2 {
+  color: var(--white);
+}
+@media (max-width: 1199px) {
+  .counting-card-items h2 {
+    font-size: 40px;
   }
 }
 
