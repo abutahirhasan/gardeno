@@ -127,26 +127,125 @@
 .accordion-item:first-child {
 	border-radius: 30px !important;
 }
-.info-box_faq{
+.info-box_faq {
 	max-width: 273px;
 	position: absolute;
 	right: 10px;
 	bottom: 40px;
-	.icon{
+	.icon {
 		width: 57px;
 		height: 57px;
 	}
-	h3{
+	h3 {
 		font-size: 28px;
 	}
-	@include breakpoint(max-xs){
+	@include breakpoint(max-xs) {
 		position: static;
 		max-width: 100%;
 		margin-top: 20px;
 	}
 }
-.faq-thumb3-big{
+.faq-thumb3-big {
 	@media screen and (max-width: 500px) {
 		padding-right: 0 !important;
+	}
+}
+.process-section03 {
+	padding: 120px 2px 280px;
+}
+.counter-section-wrap {
+	transform: translateY(-160px);
+	margin-bottom: -160px;
+	z-index: 1;
+	position: relative;
+}
+.thumb-process {
+	right: -40px;
+
+	img {
+		max-width: unset;
+	}
+	@include breakpoint(max-xl){
+		right: 0;
+		img{
+			max-width: 100%;
+		}
+	}
+}
+.process-content-wrap {
+	margin-left: 150px;
+	gap: 50px;
+	.process-content-items-middle {
+		margin-left: -240px;
+	}
+	.left-process-working {
+		left: -150px;
+		top: 90px;
+	}
+	.right-process-working {
+		right: -35px;
+		bottom: 80px;
+	}
+}
+.process-content-items {
+	max-width: 492px;
+	padding: 40px 30px 40px;
+	background-color: $white;
+	transition: all 0.4s;
+	border-radius: 10px;
+	border-left: 4px solid $theme-2-dark;
+	&:hover {
+		background-color: $theme-2-dark;
+		border-color: $theme-color-3;
+		.serial {
+			color: $theme-color-3 !important;
+		}
+		h3,
+		p {
+			color: $white !important;
+		}
+	}
+}
+.container-1320 {
+	max-width: 1350px;
+	margin: 0 auto;
+}
+@media screen and (max-width: 1399px) {
+	.process-content-wrap {
+		.left-process-working {
+			z-index: -1;
+		}
+		.right-process-working {
+			z-index: -1;
+		}
+	}
+}
+@media screen and (max-width: 1199px) {
+	.process-content-wrap {
+		margin-left: 0px;
+		gap: 20px;
+		.process-content-items-middle {
+			margin-left: 40px;
+		}
+		.left-process-working {
+			left: -150px;
+			top: 50px;
+			z-index: -1;
+		}
+		.right-process-working {
+			right: -35px;
+			bottom: 50px;
+		}
+	}
+	.process-content-items {
+		max-width: 492px;
+		padding: 28px 20px 30px;
+	}
+}
+@media screen and (max-width: 575px) {
+	.process-content-wrap {
+		.process-content-items-middle {
+			margin-left: 0px;
+		}
 	}
 }

@@ -365,6 +365,25 @@ span {
   font-style: 18px;
 }
 
+.fs-25 {
+  font-size: 25px;
+}
+@media (max-width: 1399px) {
+  .fs-25 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1199px) {
+  .fs-25 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .fs-25 {
+    font-size: 19px;
+  }
+}
+
 .theme-clr3-hover {
   transition: all 0.4s;
 }
@@ -2099,6 +2118,108 @@ span {
   }
 }
 
+.process-section03 {
+  padding: 120px 2px 280px;
+}
+
+.counter-section-wrap {
+  transform: translateY(-160px);
+  margin-bottom: -160px;
+  z-index: 1;
+  position: relative;
+}
+
+.thumb-process {
+  right: -40px;
+}
+.thumb-process img {
+  max-width: unset;
+}
+@media (max-width: 1199px) {
+  .thumb-process {
+    right: 0;
+  }
+  .thumb-process img {
+    max-width: 100%;
+  }
+}
+
+.process-content-wrap {
+  margin-left: 150px;
+  gap: 50px;
+}
+.process-content-wrap .process-content-items-middle {
+  margin-left: -240px;
+}
+.process-content-wrap .left-process-working {
+  left: -150px;
+  top: 90px;
+}
+.process-content-wrap .right-process-working {
+  right: -35px;
+  bottom: 80px;
+}
+
+.process-content-items {
+  max-width: 492px;
+  padding: 40px 30px 40px;
+  background-color: var(--white);
+  transition: all 0.4s;
+  border-radius: 10px;
+  border-left: 4px solid var(--theme-2dark);
+}
+.process-content-items:hover {
+  background-color: var(--theme-2dark);
+  border-color: var(--theme-3);
+}
+.process-content-items:hover .serial {
+  color: var(--theme-3) !important;
+}
+.process-content-items:hover h3,
+.process-content-items:hover p {
+  color: var(--white) !important;
+}
+
+.container-1320 {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1399px) {
+  .process-content-wrap .left-process-working {
+    z-index: -1;
+  }
+  .process-content-wrap .right-process-working {
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .process-content-wrap {
+    margin-left: 0px;
+    gap: 20px;
+  }
+  .process-content-wrap .process-content-items-middle {
+    margin-left: 40px;
+  }
+  .process-content-wrap .left-process-working {
+    left: -150px;
+    top: 50px;
+    z-index: -1;
+  }
+  .process-content-wrap .right-process-working {
+    right: -35px;
+    bottom: 50px;
+  }
+  .process-content-items {
+    max-width: 492px;
+    padding: 28px 20px 30px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .process-content-wrap .process-content-items-middle {
+    margin-left: 0px;
+  }
+}
 .video-wrapper {
   padding: 350px 0;
   text-align: center;

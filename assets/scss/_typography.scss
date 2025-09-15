@@ -245,6 +245,18 @@ span {
 .fs-18 {
 	font-style: 18px;
 }
+.fs-25{
+	font-size: 25px;
+	@include breakpoint(max-xxl){
+		font-size: 22px;
+	}
+	@include breakpoint(max-xl){
+		font-size: 20px;
+	}
+	@include breakpoint(max-md){
+		font-size: 19px;
+	}
+}
 //Font Size
 
 //Hover
