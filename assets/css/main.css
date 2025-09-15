@@ -6271,6 +6271,64 @@ span {
   margin: 0 auto;
 }
 
+.team-card-item-style-3 .team-image {
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 7px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.team-card-item-style-3 .team-image::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: 1;
+}
+.team-card-item-style-3 .team-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform: scale(1.02);
+  transition: all 1.5s ease-out;
+}
+.team-card-item-style-3 .team-content {
+  margin-top: 24px;
+  text-align: center;
+}
+.team-card-item-style-3 .team-content h3 {
+  margin-bottom: 3px;
+}
+.team-card-item-style-3 .team-content h3 a {
+  background-position: 0 95%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  display: inline;
+  color: #020842;
+}
+.team-card-item-style-3 .team-content h3 a:hover {
+  color: var(--theme);
+  background-size: 100% 2px;
+  background-image: linear-gradient(180deg, var(--theme) 0%, var(--theme) 100%);
+}
+.team-card-item-style-3 .team-content p {
+  color: var(--theme);
+}
+.team-card-item-style-3:hover .team-image::after {
+  height: 250%;
+  transition: all 600ms linear;
+  background-color: transparent;
+}
+.team-card-item-style-3:hover .team-image img {
+  -webkit-transform: scale3d(1.1, 1.1, 1);
+  transform: scale3d(1.1, 1.1, 1);
+}
+
 .project-card-item-style-1 {
   margin-top: 30px;
   padding: 15px;
