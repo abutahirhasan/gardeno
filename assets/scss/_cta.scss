@@ -400,3 +400,51 @@
 		}
 	}
 }
+
+//Choose
+/* Choose Us Css Start */
+.left-line {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 100%;
+        background-color: #092210;
+        opacity: 10%;
+        inset-inline-start: 24px;
+        height: calc(100% - 80px);
+        inset-block-start: 24px;
+        z-index: -1;
+
+    }
+}
+.choose--items{
+	.icons{
+		width: 100px;
+		height: 100px;
+		min-width: 100px;
+		border-radius: 50%;
+		background-color: #99A5371A;	
+		transition: all 0.4s;
+		svg{
+			path{
+				transition: all 0.4s;
+			}
+		}
+	}
+	&:hover{
+		.icons{
+			background-color: $theme-color;
+			svg{
+				path{
+					fill: $white;
+				}
+			}
+		}
+	}
+}
+
+/* Choose Us Css End */
