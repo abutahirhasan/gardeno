@@ -456,6 +456,39 @@ span {
   border-radius: 100px;
 }
 
+.image__effect {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%;
+}
+.image__effect::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: 1;
+}
+.image__effect img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: all 1.5s ease-out;
+}
+.image__effect:hover::after {
+  height: 250%;
+  transition: all 600ms linear;
+  background-color: transparent;
+}
+.image__effect:hover img {
+  -webkit-transform: scale3d(1.1, 1.1, 1);
+  transform: scale3d(1.1, 1.1, 1);
+}
+
 .about-left-items-style-1 .about-image {
   position: relative;
 }
@@ -1978,21 +2011,27 @@ span {
 }
 
 /* Choose Us Css Start */
-.left-line {
+.left-line-choose {
+  gap: 65px;
   position: relative;
   z-index: 1;
 }
-.left-line::before {
+.left-line-choose::before {
   position: absolute;
   content: "";
   width: 1px;
   height: 100%;
   background-color: #092210;
   opacity: 10%;
-  inset-inline-start: 24px;
+  inset-inline-start: 50px;
   height: calc(100% - 80px);
   inset-block-start: 24px;
-  z-index: -1;
+  z-index: -2;
+}
+@media (max-width: 1199px) {
+  .left-line-choose {
+    gap: 30px;
+  }
 }
 
 .choose--items .icons {
@@ -2000,7 +2039,7 @@ span {
   height: 100px;
   min-width: 100px;
   border-radius: 50%;
-  background-color: rgba(153, 165, 55, 0.1019607843);
+  background-color: #F5F6EB;
   transition: all 0.4s;
 }
 .choose--items .icons svg path {
@@ -2011,6 +2050,40 @@ span {
 }
 .choose--items:hover .icons svg path {
   fill: var(--white);
+}
+@media (max-width: 575px) {
+  .choose--items .icons {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+  }
+  .choose--items .icons svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.choose-counter-wrap {
+  border-radius: 15px;
+  border: 1.5px dashed #99A537;
+  padding: 28px 48px;
+  margin-bottom: 45px;
+}
+.choose-counter-wrap h2 {
+  font-size: 80px;
+  color: var(--theme);
+}
+.choose-counter-wrap h4 {
+  max-width: 250px;
+  color: #666;
+}
+@media (max-width: 575px) {
+  .choose-counter-wrap {
+    padding: 14px 20px 35px;
+  }
+  .choose-counter-wrap h2 {
+    font-size: 60px;
+  }
 }
 
 /* Choose Us Css End */
@@ -6089,7 +6162,7 @@ span {
 }
 .service-card-item-2-style-2 .list-item .service-list li {
   font-weight: 500;
-  color: #43494D;
+  color: #43494d;
   position: relative;
   padding-left: 15px;
 }
@@ -6177,6 +6250,105 @@ span {
   .service-section-2 .right-shape {
     display: none;
   }
+}
+
+.service-btn-grp button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  color: #092210;
+  justify-content: center;
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.service-btn-grp button i {
+  color: #092210;
+  font-size: 17px;
+  transition: all 0.3s ease-in-out;
+}
+.service-btn-grp button.active, .service-btn-grp button:hover {
+  background: var(--theme);
+}
+.service-btn-grp button.active i, .service-btn-grp button:hover i {
+  color: var(--white);
+}
+
+.service-gradient-thumb {
+  max-width: 750px;
+  z-index: -1;
+  inset-inline-end: 0;
+  top: 0;
+  height: 100%;
+}
+.service-gradient-thumb::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(10, 40, 3, 0.88);
+  border-radius: 10px;
+}
+@media (max-width: 1399px) {
+  .service-gradient-thumb {
+    max-width: 650px;
+  }
+}
+@media (max-width: 1199px) {
+  .service-gradient-thumb {
+    max-width: 450px;
+    width: 450px;
+  }
+  .service-gradient-thumb img {
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .service-gradient-thumb {
+    display: none;
+  }
+}
+
+.service-item__3:hover .service-btn .btn {
+  background: var(--theme);
+}
+.service-item__3:hover .service-btn .btn i {
+  color: var(--white);
+  transform: rotate(0deg);
+}
+
+.service-btn {
+  top: 50%;
+  transform: translateY(-50%);
+  inset-inline-end: -30px;
+}
+.service-btn .btn {
+  width: 65px;
+  height: 140px;
+  border-radius: 32.5px;
+  background: #30613e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.service-btn .btn i {
+  transform: rotate(-45deg);
+  transition: all 0.3s ease-in-out;
+  color: var(--white);
+}
+.service-btn .btn:hover {
+  background: var(--theme);
+}
+.service-btn .btn:hover i {
+  color: var(--white);
 }
 
 .team-card-item-style-2 {

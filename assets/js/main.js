@@ -264,6 +264,40 @@
 				});
 			}
 
+			//>> service-three-slider Start <<//
+			if ($(".service-three-slider").length > 0) {
+				const serviceThreeSlider = new Swiper(".service-three-slider", {
+					spaceBetween: 30,
+					speed: 1300,
+					loop: true,
+					autoplay: {
+						delay: 2000,
+						disableOnInteraction: false,
+					},
+					navigation: {
+						nextEl: ".array-prev",
+						prevEl: ".array-next",
+					},
+					breakpoints: {
+						1199: {
+							slidesPerView: 2,
+						},
+						991: {
+							slidesPerView: 2,
+						},
+						767: {
+							slidesPerView: 2,
+						},
+						575: {
+							slidesPerView: 1,
+						},
+						0: {
+							slidesPerView: 1,
+						},
+					},
+				});
+			}
+
 			//>> Testimonial Slider Start <<//
 			if ($(".testimonial-slider").length > 0) {
 				const TestimonialSlider = new Swiper(".testimonial-slider", {

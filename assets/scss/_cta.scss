@@ -403,7 +403,8 @@
 
 //Choose
 /* Choose Us Css Start */
-.left-line {
+.left-line-choose {
+	gap: 65px;
     position: relative;
     z-index: 1;
 
@@ -414,12 +415,15 @@
         height: 100%;
         background-color: #092210;
         opacity: 10%;
-        inset-inline-start: 24px;
+        inset-inline-start: 50px;
         height: calc(100% - 80px);
         inset-block-start: 24px;
-        z-index: -1;
+        z-index: -2;
 
     }
+	@include breakpoint(max-xl){
+		gap: 30px;		
+	}
 }
 .choose--items{
 	.icons{
@@ -427,7 +431,7 @@
 		height: 100px;
 		min-width: 100px;
 		border-radius: 50%;
-		background-color: #99A5371A;	
+		background-color: #F5F6EB;	
 		transition: all 0.4s;
 		svg{
 			path{
@@ -445,6 +449,36 @@
 			}
 		}
 	}
+	@include breakpoint(max-sm){
+		.icons{
+			width: 70px;
+			height: 70px;
+			min-width: 70px;
+			svg{
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
 }
-
+.choose-counter-wrap{
+	border-radius: 15px;
+	border: 1.5px dashed #99A537;
+	padding: 28px 48px;
+	margin-bottom: 45px;
+	h2{
+		font-size: 80px;
+		color: $theme-color;
+	}
+	h4{
+		max-width: 250px;
+		color: #666;
+	}
+	@include breakpoint(max-sm){
+		padding: 14px 20px 35px;
+		h2{
+			font-size: 60px;
+		}
+	}
+}
 /* Choose Us Css End */
