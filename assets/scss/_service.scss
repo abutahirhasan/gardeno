@@ -306,7 +306,17 @@
 }
 
 //Service 03
-.service-section-three {
+.service-three-slider{
+	margin-right: -450px;
+	@include breakpoint(max-xl) {
+		margin-right: -180px;
+	}
+	@include breakpoint(max-lg) {
+		margin-right: -380px;
+	}
+	@include breakpoint(max-md) {
+		margin-right: -0px;
+	}
 }
 .service-btn-grp {
 	button {
@@ -323,7 +333,7 @@
 		cursor: pointer;
 		transition: all 0.3s ease-in-out;
 		i {
-			color: #092210;
+			color: $white;
 			font-size: 17px;
 			transition: all 0.3s ease-in-out;
 		}
@@ -331,8 +341,11 @@
 		&:hover {
 			background: $theme-color;
 			i {
-				color: $white;
+				color: $black;
 			}
+		}
+		@include breakpoint(max-lg) {
+			background-color: $theme-color;
 		}
 	}
 }
@@ -367,6 +380,10 @@
     }
 }
 .service-item__3 {
+	justify-content: space-between;
+	h3{
+		font-size: 24px;
+	}
 	&:hover {
 		.service-btn {
 			.btn {
@@ -378,11 +395,41 @@
 			}
 		}
 	}
+	.thumb-side{
+		width: 222px;
+		max-width: 222px;
+		height: 343px;
+	}
+	.content-left{
+		max-width: 240px;
+	}
+	@media screen and (max-width: 400px) {
+		h3{
+			font-size: 18px;
+		}
+		p{
+			font-size: 14px;
+			line-height: 24px;
+		}
+		.service-btn{
+			inset-inline-end: -50px;
+			transform: translateY(-100px);
+			inset-inline-end: 1px;
+			.btn {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				i {
+					font-size: 18px;
+				}
+			}
+		}
+	}
 }
 .service-btn {
 	top: 50%;
 	transform: translateY(-50%);
-	inset-inline-end: -30px;
+	inset-inline-end: -70px;
 	.btn {
 		width: 65px;
 		height: 140px;
