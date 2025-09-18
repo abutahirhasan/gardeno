@@ -365,12 +365,12 @@
 }
 .testimonial-thumb-active2 {
 	height: 460px;
-    @include breakpoint(max-xl){
-        height: 350px;
-    }
-    @include breakpoint(max-lg){
-        height: 310px;
-    }
+	@include breakpoint(max-xl) {
+		height: 350px;
+	}
+	@include breakpoint(max-lg) {
+		height: 310px;
+	}
 }
 .small-testimonial-item {
 	border: 1px solid rgba(9, 34, 16, 0.2);
@@ -389,7 +389,7 @@
 		}
 	}
 	@include breakpoint(max-xl) {
-		padding: 12px;		
+		padding: 12px;
 		.thumb {
 			width: 60px;
 			height: 60px;
@@ -398,15 +398,15 @@
 				height: 29px;
 			}
 		}
-        .content{
-            h3{
-                font-size: 16px;
-            }
-            span{
-                display: block;
-                font-size: 13px !important;
-            }
-        }
+		.content {
+			h3 {
+				font-size: 16px;
+			}
+			span {
+				display: block;
+				font-size: 13px !important;
+			}
+		}
 	}
 }
 
@@ -473,5 +473,35 @@
 		gap: 50px;
 		padding: 36px 20px 36px 20px;
 		margin: 0 4px 0 4px;
+	}
+}
+.testimonail-btn-grap3 {
+	position: absolute;
+	right: 100px;
+	z-index: 9;
+	bottom: 70px;
+	button {
+		width: 50px;
+		height: 50px;
+		border: 1px solid rgb(9, 34, 16, 0.1);
+		border-radius: 50% !important;
+		color: $black !important;
+		&:hover {
+			background-color: $theme-2-dark !important;
+			color: $white !important;
+		}
+	}
+	.array-next {
+		background-color: $theme-2-dark;
+		color: $white !important;
+	}
+	@include breakpoint(max-xl) {
+		right: 80px;
+		bottom: 35px;
+	}
+	@include breakpoint(max-xs) {
+		position: static;
+		margin-top: 20px !important;
+		justify-content: center;
 	}
 }
